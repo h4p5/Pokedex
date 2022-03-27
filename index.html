@@ -11,23 +11,79 @@
 </head>
 <body>
     <!-- Nav -->
-    <nav>
-        <span><img src="./img/pokemon-logo.png" alt="Pokemon Logo"></span>
-        <span><button>Login</button></span>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/index.html">
+                <img src="./img/pokemon-logo.png" alt="Pokemon Logo" class="logo-img">
+            </a>
+        </div>
     </nav>
 
-    <!-- Contenido -->
-    <section>
-        <div class="welcome">
-            <!-- Welcome to the pokemon pokedex -->
-            <!-- Type the name or ID number of the pokemon you want to know information -->
-            <!-- FORM -->
-            <!-- input  -> This could be verified if number, name, or error. -->
-            <!-- Submit button -->
-            <!-- Previous and next pokemon -->
-        </div>
-        <div class="pokedex">
+    <!-- Welcome -->
+    <header>
+        <h1>Welcome to the Pokémon Pokedex</h1>
+    </header>
 
+    <!-- Contenido -->
+    <section class="content columns is-vcentered">
+        <div class="search-column column is-one-fifth">
+            <h2>Search</h2>
+            <p>
+                You can use this app to get information of any pokemon you like.
+                Enter the following information:
+            </p>
+            <form class="busqueda" action="">
+                <div class="field">
+                    <label class="label" for="search">Name or ID: </label>
+                    <div class="control">
+                        <input id="search" class="input" type="text" placeholder="Pikachu">
+                    </div>
+                </div>
+                <div class="field">
+                    <button class="button is-success search-btn" type="submit">Buscar Pokémon</button>
+                </div>
+            </form>
+            <!-- Previous and next pokemon -->
+            <button><</button><button>></button>
+        </div>
+        <div class="pokedex column">
+            <header></header>
+            <div class="columns">
+                <!-- Pokémon image -->
+                <div class="pokeimg column is-half">
+                    <img src="" alt="Pokémon image">
+                </div>
+                <div class="stats column is-half">
+                    <h2>Stats</h2>
+                    <div id="hp" class="hp">
+                        <h3>HP</h3>
+                    </div>
+                    <div id="attack" class="attack">
+                        <h3>Attack</h3>
+                    </div>
+                    <div id="defense" class="defense">
+                        <h3>Defense</h3>
+                    </div>
+                    <div id="s-attack" class="s-attack">
+                        <h3>Special Attack</h3>
+                    </div>
+                    <div id="s-defense" class="s-defense">
+                        <h3>Special Defense</h3>
+                    </div>
+                    <div id="speed" class="speed">
+                        <h3>Speed</h3>
+                    </div>
+                    <div class="info">
+                        <h3>Height: </h3><span id="height"></span>
+                        <h3>Weight: </h3><span id="wight"></span>
+                        <h3>Category: </h3><span id="category"></span>
+                        <h3>Abilities: </h3><span id="abilities"></span>
+                        <br>
+                        <h3>Type: </h3><span id="type"></span>
+                        <h3>Weaknesses: </h3><span id="weaknesses"></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
